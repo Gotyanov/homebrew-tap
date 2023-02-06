@@ -1,11 +1,11 @@
 class ToolsRunner < Formula
   desc "Helper tool for fething and running remote executables."
   homepage "https://github.com/Gotyanov/tools-runner"
-  url "https://github.com/Gotyanov/tools-runner.git", tag: "0.3.0", revision: "d79265256ac3a70dfe4f5f9e3012cbd7e2c0698e"
-  head "https://github.com/Gotyanov/tools-runner.git"
+  url "https://github.com/Gotyanov/tools-runner/archive/refs/tags/0.4.0.tar.gz"
+
+  sha256 "29bb093d17af465b998f3c3574ec2140f2b3057690244d340e5f00ed7fc07472"
 
   def install
-    system "swift", "build", "--product", "tools", "--configuration", "release", "--disable-sandbox"
-    bin.install '.build/release/tools'
+    bin.install 'Prebuilt/tools'
   end
 end
